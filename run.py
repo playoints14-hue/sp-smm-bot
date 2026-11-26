@@ -11,7 +11,7 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 SERVER_URL = "https://sp-smm-bot.onrender.com"
 
 PORT = int(os.environ.get("PORT", "10000"))
-PING_INTERVAL = 10 * 60  # ১০ মিনিট
+PING_INTERVAL = 5 * 60  # ৫ মিনিট (Render ১৫ মিনিট নিষ্ক্রিয় থাকলে ঘুমায়, তাই ৫ মিনিটে পিং)
 BOT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bot.py")
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
